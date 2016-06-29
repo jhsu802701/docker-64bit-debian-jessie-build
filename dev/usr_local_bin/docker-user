@@ -1,0 +1,56 @@
+#!/bin/bash
+
+echo '-----------------------'
+echo 'BEGIN installing Heroku'
+wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh # Install Heroku Toolbelt
+wait
+heroku version
+wait
+heroku version
+wait
+heroku version
+wait
+echo 'FINISHED installing Heroku'
+echo '--------------------------'
+
+echo '+++++++++++++++++++++++++++++++++++++++'
+echo 'BEGIN sanity checks (Developer Edition)'
+
+echo '------'
+echo 'whoami'
+whoami
+
+echo '--------------'
+echo 'sudo --version'
+sudo --version
+
+echo '--------------'
+echo 'nano --version'
+nano --version
+
+echo '--------------'
+echo 'tree --version'
+tree --version
+
+echo '-------'
+echo 'tmux -V'
+tmux -V
+
+echo '-----------------------'
+echo 'puppet master --version'
+puppet master --version
+
+echo '------------'
+echo 'chef-solo -v'
+chef-solo -v
+
+echo '-----------------'
+echo 'ansible --version'
+ansible --version
+
+echo '--------------'
+echo 'heroku version'
+heroku version
+
+echo 'FINISHED sanity checks (Developer Edition)'
+echo '++++++++++++++++++++++++++++++++++++++++++'
