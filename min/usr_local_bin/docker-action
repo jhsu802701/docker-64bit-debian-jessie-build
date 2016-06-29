@@ -1,0 +1,27 @@
+#!/bin/bash
+
+SECONDS=0
+/usr/local/bin/docker-root-aptget
+
+echo '***********************************************************'
+echo 'BEGIN transforming official Debian into the Minimal Edition'
+echo '***********************************************************'
+
+echo '-------------'
+echo 'Time elapsed:'
+echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
+/usr/local/bin/docker-root
+su -c /usr/local/bin/docker-user winner
+echo '-------------'
+echo 'Time elapsed:'
+echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
+
+echo '**************************************************************'
+echo 'FINISHED transforming official Debian into the Minimal Edition'
+echo '**************************************************************'
+
+/usr/local/bin/docker-root-finalize
+su -c /usr/local/bin/docker-user-finalize winner
+echo '-------------'
+echo 'Time elapsed:'
+echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
