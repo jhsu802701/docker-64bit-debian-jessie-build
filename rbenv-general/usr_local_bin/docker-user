@@ -94,11 +94,6 @@ type rbenv
 
 # Latest versions of Ruby
 # https://www.ruby-lang.org/en/downloads/
-time install_ruby_version 2.3.0
-echo 'The time it took to install Ruby 2.3.0 and various gems is printed above.'
-echo '-------------------------------------------------------------------------'
-rbenv global 2.3.0
-
 time install_ruby_version 2.3.1
 echo 'The time it took to install Ruby 2.3.1 and various gems is printed above.'
 echo '-------------------------------------------------------------------------'
