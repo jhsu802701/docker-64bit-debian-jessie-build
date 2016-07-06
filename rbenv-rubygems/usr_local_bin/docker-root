@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Set environment variables to cut down on annoying warning messages
+export DEBIAN_FRONTEND='noninteractive'
+export DEBCONF_NOWARNINGS='true'
+export HOME=/root
+export LC_ALL=C
+
+# Source: https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-repositories.html
+wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+echo "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" | tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
+/usr/local/bin/docker-root-aptget
+echo '****************************************************'
+echo 'BEGIN apt-get install -y elasticsearch openjdk-7-jre'
+echo '****************************************************'
+apt-get install -y elasticsearch openjdk-7-jre
+echo '*******************************************************'
+echo 'FINISHED apt-get install -y elasticsearch openjdk-7-jre'
+echo '*******************************************************'
+
+
