@@ -1,0 +1,27 @@
+#!/bin/bash
+
+SECONDS=0
+sudo /usr/local/bin/docker-root-aptget
+
+echo '**********************************************'
+echo 'BEGIN transforming rbenv-min into rbenv-rubymn'
+echo '**********************************************'
+
+echo '-------------'
+echo 'Time elapsed:'
+echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
+sudo /usr/local/bin/docker-root
+/usr/local/bin/docker-user
+echo '-------------'
+echo 'Time elapsed:'
+echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
+
+echo '*************************************************'
+echo 'FINISHED transforming rbenv-min into rbenv-rubymn'
+echo '*************************************************'
+
+sudo /usr/local/bin/docker-root-finalize
+/usr/local/bin/docker-user-finalize
+echo '-------------'
+echo 'Time elapsed:'
+echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
