@@ -124,6 +124,10 @@ echo '----------'
 echo 'type rbenv'
 type rbenv
 
+echo '--------------'
+echo 'rbenv versions'
+rbenv versions
+
 echo '-------'
 echo 'ruby -v'
 ruby -v
