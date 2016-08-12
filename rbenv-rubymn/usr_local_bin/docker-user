@@ -55,9 +55,9 @@ time install_ruby_version 2.1.8
 echo 'The time it took to install Ruby 2.1.8 and various gems is printed above.'
 echo '-------------------------------------------------------------------------'
 
-time install_ruby_version 2.1.9
-echo 'The time it took to install Ruby 2.1.9 and various gems is printed above.'
-echo '-------------------------------------------------------------------------'
+time install_ruby_version 2.1.10
+echo 'The time it took to install Ruby 2.1.10 and various gems is printed above.'
+echo '--------------------------------------------------------------------------'
 
 rbenv global 2.1.8
 
