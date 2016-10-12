@@ -10,6 +10,7 @@ echo 'cat /etc/motd' >> /home/winner/.bashrc
 echo "echo '------------------------------'" >> /home/winner/.bashrc
 echo "echo 'cat /home/winner/timestamp.txt'" >> /home/winner/.bashrc
 echo 'cat /home/winner/timestamp.txt' >> /home/winner/.bashrc
+echo 'cd /home/winner/shared' >> /home/winner/.bashrc
 
 echo '+++++++++++++++++++++++++++++++++++++'
 echo 'BEGIN sanity checks (Minimal Edition)'
