@@ -3,22 +3,23 @@
 SECONDS=0
 sudo /usr/local/bin/docker-root-aptget
 
-echo '***********************************************************************'
-echo 'BEGIN transforming the Developer Edition into the rbenv-minimal Edition'
-echo '***********************************************************************'
+echo '*****************************************************************'
+echo 'BEGIN transforming the Minimal Edition into the Developer Edition'
+echo '*****************************************************************'
 
 echo '-------------'
 echo 'Time elapsed:'
 echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
 sudo /usr/local/bin/docker-root
-/usr/local/bin/docker-user
+/usr/local/bin/docker-user1
+/usr/local/bin/docker-user2
 echo '-------------'
 echo 'Time elapsed:'
 echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
 
-echo '**************************************************************************'
-echo 'FINISHED transforming the Developer Edition into the rbenv-minimal Edition'
-echo '**************************************************************************'
+echo '********************************************************************'
+echo 'FINISHED transforming the Minimal Edition into the Developer Edition'
+echo '********************************************************************'
 
 sudo /usr/local/bin/docker-root-finalize
 /usr/local/bin/docker-user-finalize
