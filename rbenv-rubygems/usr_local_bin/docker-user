@@ -4,6 +4,18 @@ echo '******************************'
 echo 'BEGIN installing Ruby on Rails'
 echo '******************************'
 
+# BEGIN: activate rbenv
+export PATH="/home/winner/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+# END: activate rbenv
+
+# BEGIN: activate NVM
+export NVM_DIR="/home/winner/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# END: activate NVM
+
+nvm use --lts # Activate Node
+
 # Set of gems to install for each version of Ruby
 function install_gems {
   echo '-------------------'
@@ -44,11 +56,6 @@ function install_ruby_version {
   rbenv global $ruby_version
   install_gems
 }
-
-# Allow rbenv commands to work
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-type rbenv
 
 # Latest versions of Ruby
 # https://www.ruby-lang.org/en/downloads/
@@ -112,9 +119,21 @@ echo '--------------'
 echo 'psql --version'
 psql --version
 
-echo '---------'
-echo 'nodejs -v'
-nodejs -v
+echo '--------------'
+echo 'command -v nvm'
+command -v nvm
+
+echo '-------------'
+echo 'nvm --version'
+nvm --version
+
+echo '-----------'
+echo 'npm version'
+npm version
+
+echo '-------'
+echo 'node -v'
+node -v
 
 echo '----------'
 echo 'type rbenv'

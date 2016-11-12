@@ -1,4 +1,4 @@
-FROM jhsu802701/debian-jessie-rbenv-min
+FROM jhsu802701/debian-jessie-dev
 MAINTAINER Jason Hsu
 
 COPY usr_local_bin/docker-* /usr/local/bin/
