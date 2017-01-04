@@ -39,10 +39,10 @@ function install_ruby_version {
 
 # Latest versions of Ruby
 # https://www.ruby-lang.org/en/downloads/
-time install_ruby_version 2.3.1
-echo 'The time it took to install Ruby 2.3.1 and various gems is printed above.'
+time install_ruby_version 2.3.3
+echo 'The time it took to install Ruby 2.3.3 and various gems is printed above.'
 echo '-------------------------------------------------------------------------'
-rbenv global 2.3.1
+rbenv global 2.3.3
 
 echo '***********************************'
 echo 'FINISHED installing Ruby and Jekyll'
