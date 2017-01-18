@@ -24,21 +24,17 @@ echo '--------------------------'
 echo '++++++++++++++++++++'
 echo 'BEGIN installing NVM'
 
-echo '----------------------------------------------------------------'
-echo 'git clone https://github.com/creationix/nvm.git /home/winner/nvm'
-git clone https://github.com/creationix/nvm.git /home/winner/nvm
+echo '-----------------------------------------------------------------'
+echo 'git clone https://github.com/creationix/nvm.git /home/winner/.nvm'
+git clone https://github.com/creationix/nvm.git /home/winner/.nvm
 
-echo '------------------------------------'
-echo 'cd /home/winner/nvm && sh install.sh'
-cd /home/winner/nvm && sh install.sh
+echo '-------------------------------------'
+echo 'cd /home/winner/.nvm && sh install.sh'
+cd /home/winner/.nvm && sh install.sh
 
 echo '----'
 echo 'wait'
 wait
-
-echo '-----------------------'
-echo 'rm -rf /home/winner/nvm'
-rm -rf /home/winner/nvm
 
 echo 'FINISHED installing NVM'
 echo '+++++++++++++++++++++++'
