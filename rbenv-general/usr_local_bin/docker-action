@@ -11,8 +11,8 @@ echo '-------------'
 echo 'Time elapsed:'
 echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
 
-sudo /usr/local/bin/docker-root
-/usr/local/bin/docker-user
+curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/rbenv-general/root.sh | sudo bash
+curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/rbenv-general/user.sh | bash
 
 echo '-------------'
 echo 'Time elapsed:'
@@ -22,8 +22,9 @@ echo '********************************************'
 echo 'FINISHED transforming dev into rbenv-general'
 echo '********************************************'
 
-sudo /usr/local/bin/docker-root-finalize
-/usr/local/bin/docker-user-finalize
+curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/finalize-root.sh | sudo bash
+curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/finalize-user.sh | bash
+
 echo '-------------'
 echo 'Time elapsed:'
 echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
