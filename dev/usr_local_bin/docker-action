@@ -2,7 +2,10 @@
 
 SECONDS=0
 sudo /usr/local/bin/docker-root-aptget
-sudo apt-get install -y curl
+
+echo '---------------------------------------'
+echo 'apt-get install -y curl ca-certificates'
+apt-get install -y curl ca-certificates
 
 echo '*******************************'
 echo 'BEGIN transforming min into dev'
