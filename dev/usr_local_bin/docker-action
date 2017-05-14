@@ -4,9 +4,9 @@ SECONDS=0
 sudo /usr/local/bin/docker-root-aptget
 sudo apt-get install -y curl
 
-echo '*****************************************'
-echo 'BEGIN transforming dev into rbenv-general'
-echo '*****************************************'
+echo '*******************************'
+echo 'BEGIN transforming min into dev'
+echo '*******************************'
 
 echo '-------------'
 echo 'Time elapsed:'
@@ -21,9 +21,9 @@ echo '-------------'
 echo 'Time elapsed:'
 echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
 
-echo '********************************************'
-echo 'FINISHED transforming dev into rbenv-general'
-echo '********************************************'
+echo '**********************************'
+echo 'FINISHED transforming min into dev'
+echo '**********************************'
 
 curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/finalize-root.sh | sudo bash
 curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/finalize-user.sh | bash
