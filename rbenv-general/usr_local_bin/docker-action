@@ -13,6 +13,7 @@ echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
 
 curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/rbenv-general/root.sh | sudo bash
 curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/rbenv-general/user.sh | bash
+curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/rbenv-general/check.sh | bash
 
 echo '-------------'
 echo 'Time elapsed:'
