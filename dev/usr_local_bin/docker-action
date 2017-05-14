@@ -2,6 +2,7 @@
 
 SECONDS=0
 sudo /usr/local/bin/docker-root-aptget
+sudo apt-get install -y curl
 
 echo '*****************************************'
 echo 'BEGIN transforming dev into rbenv-general'
