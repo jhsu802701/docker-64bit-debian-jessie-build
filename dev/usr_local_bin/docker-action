@@ -3,26 +3,30 @@
 SECONDS=0
 sudo /usr/local/bin/docker-root-aptget
 
-echo '*****************************************************************'
-echo 'BEGIN transforming the Minimal Edition into the Developer Edition'
-echo '*****************************************************************'
+echo '*****************************************'
+echo 'BEGIN transforming dev into rbenv-general'
+echo '*****************************************'
 
 echo '-------------'
 echo 'Time elapsed:'
 echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
-sudo /usr/local/bin/docker-root
-/usr/local/bin/docker-user1
-/usr/local/bin/docker-user2
+
+curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/dev/root.sh | sudo bash
+curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/dev/user1.sh | bash
+curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/dev/user2.sh | bash
+curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/dev/check.sh | bash
+
 echo '-------------'
 echo 'Time elapsed:'
 echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
 
-echo '********************************************************************'
-echo 'FINISHED transforming the Minimal Edition into the Developer Edition'
-echo '********************************************************************'
+echo '********************************************'
+echo 'FINISHED transforming dev into rbenv-general'
+echo '********************************************'
 
-sudo /usr/local/bin/docker-root-finalize
-/usr/local/bin/docker-user-finalize
+curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/finalize-root.sh | sudo bash
+curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/finalize-user.sh | bash
+
 echo '-------------'
 echo 'Time elapsed:'
 echo "$(($SECONDS / 60)) minutes and $(($SECONDS % 60)) seconds"
