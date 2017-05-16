@@ -1,11 +1,8 @@
 #!/bin/bash
 
 SECONDS=0
-sudo /usr/local/bin/docker-root-aptget
 
-echo '----------------------------'
-echo 'sudo apt-get install -y curl'
-sudo apt-get install -y curl
+curl https://raw.githubusercontent.com/jhsu802701/docker-debian-jessie-custom/master/aptget.sh | sudo bash
 
 echo '*******************************'
 echo 'BEGIN transforming min into dev'
