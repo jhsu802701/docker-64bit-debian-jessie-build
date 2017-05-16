@@ -2,6 +2,8 @@
 
 DOCKER_IMAGE='jhsu802701/debian-jessie-min'
 
+sh delete.sh
+
 DATE=`date +%Y_%m%d_%H%M_%S`
 DIR_ROOT=$(dirname $PWD)
 DIR_LOG=$DIR_ROOT/log
